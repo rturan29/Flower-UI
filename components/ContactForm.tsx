@@ -4,11 +4,8 @@ import {
   Button,
   Container,
   Grid,
-  // LinearProgress,
-  // Snackbar,
   TextField,
 } from "@material-ui/core";
-//import MuiAlert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -57,14 +54,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-/* function Alert(props) {
-  return <MuiAlert elevation={6} variant='filled' {...props} />;
-} */
 
 const ContactForm = props => {
   const classes = useStyles();
-  //const [isLoading, setIsloading] = React.useState(false);
-  // const [isResponseVisible, setIsResponseVisible] = React.useState(false);
 
   return (
     <React.Fragment>
@@ -142,9 +134,7 @@ const ContactForm = props => {
               rows="6"
               variant="outlined"
             />
-            {/*  {isLoading && (
-              <LinearProgress color='primary' className={classes.loading} />
-            )} */}
+
           </Grid>
           <Grid item xs={12}>
             <Button
@@ -158,15 +148,6 @@ const ContactForm = props => {
           </Grid>
         </Grid>
       </Container>
-      {/*  <Snackbar
-        open={isResponseVisible}
-        autoHideDuration={6000}
-        onClose={() => setIsResponseVisible(false)}
-      >
-        <Alert onClose={() => setIsResponseVisible(false)} severity='success'>
-          {'Your message was sent successfully. Thanks!'}
-        </Alert>
-      </Snackbar> */}
     </React.Fragment>
   );
 };

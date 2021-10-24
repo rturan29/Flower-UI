@@ -9,9 +9,8 @@ export default async function getData(query, preview) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${
-            preview ? CONTENT_PREVIEW_API_TOKEN : REACT_APP_CDA_TOKEN
-          }`,
+          Authorization: `Bearer ${preview ? CONTENT_PREVIEW_API_TOKEN : REACT_APP_CDA_TOKEN
+            }`,
         },
         body: JSON.stringify({ query }),
       }
@@ -19,7 +18,6 @@ export default async function getData(query, preview) {
 
     return response.json();
   } catch (err) {
-    const errors = err;
-    return errors;
+    return err;
   }
 }

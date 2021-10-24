@@ -7,7 +7,7 @@ import ContactInfo from "./ContactInfo";
 import { PageDataContext } from "../pageDataContext";
 
 const outerFunc = URL => {
-  const useStyles = makeStyles(theme => ({
+  return makeStyles(theme => ({
     root: {
       position: "relative",
       minHeight: "calc(70vh - 110px)",
@@ -140,15 +140,13 @@ const outerFunc = URL => {
       },
     },
   }));
-
-  return useStyles;
 };
 
 const Home = () => {
   const [pageData] = React.useContext(PageDataContext);
   const heroBackgroundUrl = pageData.hero.heroImage.url;
-  const outer = outerFunc(heroBackgroundUrl);
-  const classes = outer();
+  const useStyles = outerFunc(heroBackgroundUrl);
+  const classes = useStyles();
 
   return (
     <section className={classes.root} id="home">

@@ -6,7 +6,7 @@ import Icon from "../Icons/Icon";
 import { PageDataContext } from "../pageDataContext";
 
 const outerFunc = URL => {
-  const useStyles = makeStyles(theme => ({
+  return makeStyles(theme => ({
     root: {
       color: "#616161",
       padding: "70px 0 140px 0",
@@ -61,15 +61,13 @@ const outerFunc = URL => {
       },
     },
   }));
-
-  return useStyles;
 };
 
 const Services = () => {
   const [pageData] = React.useContext(PageDataContext);
   const imageURL = pageData.services.serviceImage.url;
-  const closureFunc = outerFunc(imageURL);
-  const classes = closureFunc();
+  const useStyles = outerFunc(imageURL);
+  const classes = useStyles();
 
   return (
     <section id="services" className={classes.root}>

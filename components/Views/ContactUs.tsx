@@ -145,11 +145,11 @@ const ContactUs = () => {
         width="100%"
         height="400"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.6238147631666!2d-79.48965364854608!3d43.780667179014664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2f2b496bb5bf%3A0xf6acaa69ed95ca06!2sIstanbul%20Auto%20Services!5e0!3m2!1sen!2sca!4v1609035189929!5m2!1sen!2sca"
-        tabIndex="0"
-        frameBorder="0"
+        tabIndex={0}
+        frameBorder={0}
         scrolling="no"
-        marginHeight="0"
-        marginWidth="0"
+        marginHeight={0}
+        marginWidth={0}
         aria-label="Google map shows store address"
         title="Google map shows store address"
       />

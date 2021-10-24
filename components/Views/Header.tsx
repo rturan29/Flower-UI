@@ -7,10 +7,9 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import PhoneIcon from "@material-ui/icons/Phone";
-import { animateScroll as scroll } from "react-scroll";
 import { PageDataContext } from "../pageDataContext";
 
 const useStyles = makeStyles(theme => ({
@@ -211,7 +210,7 @@ const Navbar = ({ sticky }) => {
               {companyInfo.companyAdress}
             </Typography>
           </div>
-          <div className={classes.phone}>
+          <div >
             <PhoneIcon />
             <Typography
               noWrap

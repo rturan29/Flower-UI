@@ -36,7 +36,7 @@ export default function appHome({ pageData, preview }) {
 
   return (
     <PageDataContext.Provider value={[pageDataState, setpageDataState]}>
-      {preview ? <PreviewBar preview={preview} /> : ""}
+      {preview ? <PreviewBar /> : null}
 
       <Navbar sticky={isSticky} />
       <main ref={stickyRef}>

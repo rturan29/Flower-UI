@@ -62,7 +62,7 @@ const ContactInfo = () => {
 
   return (
     <div className={classes.root}>
-      <Grid container direction="row" className={classes.gridContainer}>
+      <Grid container direction="row">
         <Grid
           item
           xs={12}
